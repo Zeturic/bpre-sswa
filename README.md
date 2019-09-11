@@ -37,3 +37,7 @@ make
 ```
 
 This won't actually modify `rom.gba`, instead your output will be in `test.gba`. Naturally, test it in an emulator.
+
+### Credits
+
+The project structure and some of the build tools are from [pokeemerald](https://github.com/pret/pokeemerald).
