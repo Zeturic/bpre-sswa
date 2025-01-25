@@ -10,7 +10,7 @@
 
 .org 0x0813B20C
 .area 0xF0, 0xFE
-    ldr r3, =ChangeSummaryPokemonNormal |1
+    ldr r3, =SeekToNextMonInSingleParty |1
     bx r3
     .pool
 .endarea

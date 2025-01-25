@@ -13,6 +13,6 @@ struct PACKED PokemonSummaryScreen {
 };
 
 extern struct PokemonSummaryScreen *sMonSummaryScreen;
-extern u8 sMonSummaryScreenCurrMonIndex;
+extern u8 sLastViewedMonIndex;
 
 _Static_assert(sizeof(struct PokemonSummaryScreen) == 0x3308, "ass");

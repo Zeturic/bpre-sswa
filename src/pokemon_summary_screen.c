@@ -2,10 +2,10 @@
 #include "pokemon.h"
 #include "pokemon_summary_screen.h"
 
-s8 ChangeSummaryPokemonNormal(s8 delta)
+s8 SeekToNextMonInSingleParty(s8 delta)
 {
     struct Pokemon *mon = sMonSummaryScreen->monList.mons;
-    u8 index = sMonSummaryScreenCurrMonIndex;
+    u8 index = sLastViewedMonIndex;
     u8 numMons = sMonSummaryScreen->maxMonIndex + 1;
     delta += numMons;
 
@@ -17,7 +17,7 @@ s8 ChangeSummaryPokemonNormal(s8 delta)
             index = (index + delta) % numMons;
 
     // to avoid "scrolling" to the same Pokemon
-    if (index == sMonSummaryScreenCurrMonIndex)
+    if (index == sLastViewedMonIndex)
         return -1;
     else
         return index;
